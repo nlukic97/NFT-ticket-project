@@ -1,0 +1,18 @@
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+}
+
+.logo .logoText {
+    margin-left: 7px;
+    width: 96px;
+    font-weight: 'Inter',sans-serif;
+    font-weight: 700;
+    line-height: 20px;
+}

@@ -1,0 +1,61 @@
+/* navigation styling */
+.navFull {
+    background-color: #051849;
+    border-bottom: 2px solid red; /* todo change this to #fff */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding: 0 30px;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li a {
+    padding: 30px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+nav a:hover, nav ul li button:hover {
+    cursor: pointer;
+}
+
+nav ul li button {
+    padding: 10px;
+    background-color: #0741FD;
+    color: #fff;
+    width: 131px;
+    height: 36px;
+    font-size: 14px;
+    font-family: Arial,sans-serif;
+    border-radius: 10px;
+    border: none;
+}
+
+nav ul li button:hover {
+    background-color: #2657f9;
+}
+
+nav ul li button:active {
+    background-color: #0741FD;
+
+}
