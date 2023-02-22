@@ -1,7 +1,12 @@
 /* navigation styling */
+.navContainer {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
 .navFull {
     background-color: #051849;
-    border-bottom: 2px solid red; /* todo change this to #fff */
+    border-bottom: 2px solid #fff; /* todo change this to #fff */
 }
 
 nav {
@@ -11,6 +16,10 @@ nav {
     color: #fff;
     font-family: 'Inter', sans-serif;
     padding: 0 30px;
+}
+
+nav #hamburgerBtn {
+    display: none;
 }
 
 nav ul {
@@ -57,5 +66,41 @@ nav ul li button:hover {
 
 nav ul li button:active {
     background-color: #0741FD;
+}
 
+@media (max-width:550px){
+    nav {
+        display: block;
+        position: relative;
+    }
+
+    nav ul {
+        display: none;
+        padding: 0;
+    }
+
+    nav ul li:first-child {
+        border-bottom: 1px solid #fff;
+    }
+
+    nav ul li a {
+        padding: 20px;
+    }
+
+    nav ul li button{
+        margin-top: 20px;
+    }
+
+    nav input#hamburgerBtn {
+        display: block;
+        position:absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height:50px
+    }
+
+    nav input#hamburgerBtn:checked + ul {
+        display: block;
+    }
 }

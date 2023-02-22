@@ -1,6 +1,7 @@
 .logo {
     display: flex;
     align-items: center;
+    background-color: #051849;
 }
 
 .logo img {
@@ -12,7 +13,9 @@
 .logo .logoText {
     margin-left: 7px;
     width: 96px;
-    font-weight: 'Inter',sans-serif;
+    font-family: 'Inter',sans-serif;
     font-weight: 700;
     line-height: 20px;
+    color: #fff;
+    text-align: left;
 }

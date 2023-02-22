@@ -6,7 +6,10 @@ const Nav = ({openConnectWalletModal}) => {
   return (
     <div className='navFull'>
         <nav className='navContainer'>
-              <a href="./"><Logo /></a>
+            <Logo />
+            
+            <input type="checkbox" id="hamburgerBtn" />
+
             <ul>
                 <li><a href="./">About</a></li>
                 <li><button onClick={openConnectWalletModal}>Connect Wallet</button></li>
