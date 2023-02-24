@@ -1,6 +1,50 @@
 /* google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 
+/* Adding variables and base text styling */
+html {
+  --main-dark:#051849;
+  --main-light:#051849;
+  
+  --font-dark:#051849;
+  --font-light:#fff;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 69px; /* It was originally 69.17px but rounded all values, did the same for all line heights in task */
+  font-weight: 900;
+  font-family: "Inter",sans-serif; /* todo change to inter black */
+}
+
+h2 {
+  font-size: 48px;
+  line-height: 59px;
+  font-weight: 900;
+  font-family: "Inter",sans-serif; /* todo change to inter black */
+}
+
+h3 {
+  font-size: 40px;
+  line-height: 49px;
+  font-weight: 900;
+  font-family: "Inter",sans-serif; /* todo change to inter black */
+}
+
+.body-text-1 {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 400;
+  font-family: "Inter",sans-serif;
+}
+
+.body-text-2 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "Inter",sans-serif;
+}
+
 /* utility class */
 body {
   margin: 0;
