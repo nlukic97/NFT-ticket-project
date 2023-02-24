@@ -5,7 +5,7 @@
   }
   
 .navFull {
-    background-color: #051849;
+    background-color: var(--main-dark);
     border-bottom: 2px solid #fff; /* todo change this to #fff */
 }
 
@@ -50,7 +50,7 @@ nav a:hover, nav ul li button:hover {
 
 nav ul li button {
     padding: 10px;
-    background-color: #0741FD;
+    background-color: var(--main-light);
     color: #fff;
     width: 131px;
     height: 36px;
@@ -61,11 +61,12 @@ nav ul li button {
 }
 
 nav ul li button:hover {
-    background-color: #2657f9;
+    background-color: var(--main-light);
+    filter:brightness(1.3) /* todo check this */
 }
 
 nav ul li button:active {
-    background-color: #0741FD;
+    background-color: var(--main-light);
 }
 
 @media (max-width:550px){

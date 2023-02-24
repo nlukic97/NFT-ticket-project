@@ -4,10 +4,12 @@
 /* Adding variables and base text styling */
 html {
   --main-dark:#051849;
-  --main-light:#051849;
+  --main-light:#0741FD;
   
   --font-dark:#051849;
   --font-light:#fff;
+
+  --banner-bg:#01CD99;
 }
 
 h1 {
@@ -94,10 +96,7 @@ body {
 /* ticketSpec section */
 .ticketSpec h2 {
   text-align: center;
-  font-weight: 900;
-  font-size: 56px;
-  font-family: "Inter",sans-serif;
-  color: #051849;
+  color: var(--font-dark);
   margin: 109px 0;
 }
 
@@ -106,7 +105,7 @@ body {
 footer {
   margin: 0;
   padding: 0;
-  background-color: #051849;
+  background-color: var(--main-dark);
   color: #fff;
   font-family: "Inter",sans-serif;
   padding: 45px 0;

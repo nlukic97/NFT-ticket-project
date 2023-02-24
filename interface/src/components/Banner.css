@@ -1,14 +1,14 @@
 .bannerFull {
-    background-color: #01CD99;
+    background-color: var(--banner-bg);
+    color: var(--font-dark);
+    font-family: 'Inter', sans-serif;
 }
 .bannerInner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Inter', sans-serif;
     font-size: 18px;
     line-height: 21.78px;
-    color: #051849;
     padding: 0 30px;
 }
 
@@ -20,7 +20,6 @@
     height: 42px;
     width: 53px;
     line-height: 21.78px;
-    color: #051849;
 }
 
 .bannerInner .text {
