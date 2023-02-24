@@ -1,0 +1,50 @@
+/* hero section */
+.heroContainer {
+    background-color: #051849;
+    background-image: url('../../public/images/vectorBg1.png'); /* todo sort this bg out*/
+    background-repeat: no-repeat;
+    background-size: 120% auto;
+    background-position:bottom left;
+}
+
+.heroSection {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter",sans-serif;
+    min-height: 800px;
+}
+
+.heroSection .left h1 {
+    max-width: 530px;
+}
+
+.heroSection .left p {
+    max-width: 455px;
+}
+
+.heroSection .right {
+    position: relative;
+    width: 60%;
+}
+
+.heroSection img {
+    /* width: 849px; */
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px; /* info - Added this just in case even though image has */
+}
+
+.right::after {
+    content: "";
+    position: absolute;
+    top: -6%;
+    right: -3%;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    border:2px solid #064880;
+    border-radius:20px;
+}

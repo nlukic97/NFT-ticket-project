@@ -62,43 +62,6 @@ body {
   text-align: center;
 }
 
-/* hero section */
-.heroContainer {
-  background-color: #051849;
-  background-image: url('../public/images/vectorBg1.png'); /* todo sort this bg out*/
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-  background-position:bottom right;
-  display: none; /* todo - remove this */
-}
-
-.heroSection {
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Inter",sans-serif;
-  min-height: 800px;
-}
-
-.heroSection .left h1 {
-  max-width: 530px;
-  font-size: 56px;
-  line-height: 67px;
-  font-weight: 900;
-}
-
-.heroSection .left p {
-  max-width: 455px;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 400px;
-}
-
-.heroSection img {
-  width: 445px;
-}
-
 /* ticketSpec section */
 .ticketSpec h2 {
   text-align: center;
