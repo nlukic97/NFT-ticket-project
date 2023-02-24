@@ -33,4 +33,19 @@ describe("NftTicket", function () {
   it('should mint 1 nft to Alice\'s address',async function() {
     await expect(this.ticket.connect(this.signers.alice).mint()).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,0)
   })
+  
+  it('tokenURI method should return the same string no matter the tokenId',async function(){
+    // mingint three NFT's to Alice (tokenId's of 0, 1, and 2)
+    await expect(this.ticket.connect(this.signers.alice).mint()).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,0)
+    await expect(this.ticket.connect(this.signers.alice).mint()).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,0)
+    await expect(this.ticket.connect(this.signers.alice).mint()).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,0)
+
+    // getting URI's for minted tokens
+    const nftUri0 = await this.ticket.tokenURI(0)
+    const nftUri1 = await this.ticket.tokenURI(1)
+    const nftUri2 = await this.ticket.tokenURI(2)
+
+    expect(nftUri0).to.be.equal(nftUri1).and.to.be.equal(nftUri2)
+
+  })
 });
