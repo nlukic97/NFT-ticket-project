@@ -2,20 +2,19 @@
 .navContainer {
     max-width: 1600px;
     margin: 0 auto;
+    padding: 5px 20px;
   }
   
 .navFull {
     background-color: var(--main-dark);
-    border-bottom: 2px solid #fff; /* todo change this to #fff */
+    border-bottom: 2px solid #fff;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     color: #fff;
     font-family: 'Inter', sans-serif;
-    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav #hamburgerBtn {
@@ -25,8 +24,8 @@ nav #hamburgerBtn {
 nav ul {
     display: flex;
     align-items: center;
-    margin: 0;
     padding: 0;
+    background-color: var(--main-dark);
 }
 
 nav ul li {
@@ -39,9 +38,8 @@ nav a {
 }
 
 nav ul li a {
-    padding: 30px;
+    margin: 30px;
     font-size: 14px;
-    display: inline-block;
 }
 
 nav a:hover, nav ul li button:hover {
@@ -69,39 +67,37 @@ nav ul li button:active {
     background-color: var(--main-light);
 }
 
-@media (max-width:550px){
-    nav {
-        display: block;
+@media (max-width:500px){
+    nav #hamburgerBtn {
+        display: inline-block;
+    }
+    
+    .navContainer {
         position: relative;
+        padding: 20px;
     }
 
     nav ul {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        top: calc(100% + 2px);
+        margin: 0;
+        padding: 0 16px;
+        width: 100%;
+    }
+
+    nav ul li {
+        padding: 23px 0;
+    }
+
+    nav ul.hiddenOnSmallScreen {
         display: none;
-        padding: 0;
     }
 
     nav ul li:first-child {
         border-bottom: 1px solid #fff;
-    }
-
-    nav ul li a {
-        padding: 20px;
-    }
-
-    nav ul li button{
-        margin-top: 20px;
-    }
-
-    nav input#hamburgerBtn {
-        display: block;
-        position:absolute;
-        top: 0;
-        right: 0;
-        width: 50px;
-        height:50px
-    }
-
-    nav input#hamburgerBtn:checked + ul {
-        display: block;
     }
 }

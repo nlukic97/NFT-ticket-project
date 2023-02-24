@@ -1,18 +1,26 @@
-import React from 'react'
+import {useState} from 'react'
 import Logo from './Logo'
 import "./Nav.css"
 
-const Nav = ({openConnectWalletModal}) => {
+const Nav = () => {
+  const [hideMobileMenu, setHideMobileMenu] = useState(true)
+  
+  function toggleMobileMenu(){
+    setHideMobileMenu(!hideMobileMenu)
+  }
+  
   return (
     <div className='navFull'>
         <nav className='navContainer'>
             <Logo />
             
-            <input type="checkbox" id="hamburgerBtn" />
+            <button id='hamburgerBtn' onClick={toggleMobileMenu}>
+              {hideMobileMenu ? "open" : "X"}
+            </button>
 
-            <ul>
+            <ul className={ hideMobileMenu ? "hiddenOnSmallScreen":null}>
                 <li><a href="./">About</a></li>
-                <li><button onClick={openConnectWalletModal}>Connect Wallet</button></li>
+                <li><button>Connect Wallet</button></li>
             </ul>
         </nav >
     </div>
