@@ -15,7 +15,8 @@ const Nav = () => {
             <Logo />
             
             <button id='hamburgerBtn' onClick={toggleMobileMenu}>
-              {hideMobileMenu ? "open" : "X"}
+              
+              <div className={hideMobileMenu ? 'line' : 'line openMobileMenu'}></div>
             </button>
 
             <ul className={ hideMobileMenu ? "hiddenOnSmallScreen":null}>
