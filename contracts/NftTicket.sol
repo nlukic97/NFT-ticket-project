@@ -24,6 +24,12 @@ contract NftTicket is ERC721 {
         _;
     }
 
+    /// @notice Returns the url link to the json metadata. 
+    /// @dev Overriding method to return same url for all NFT's
+    function tokenURI(uint256) public pure override returns(string memory){
+        return "https://bafkreigir6ghsggfh6nnqbhccmuornvbogtpapgfek6oyu4hzpru6fnmje.ipfs.nftstorage.link";
+    }
+
     /// @notice Mints an NFT to a wallet address
     /// @dev Applies the limitTokenAmount modifier
     function mint() external limitTokenAmount {
