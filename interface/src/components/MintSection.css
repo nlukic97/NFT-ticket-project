@@ -11,6 +11,7 @@
     font-size: 18px;
     line-height: 20px;
     padding: 0 40px;
+    margin-bottom: 140px;
 }
 
 .imgSpecContainer .leftCard {
@@ -23,6 +24,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 368px; /* todo check if this is as it should be */
 }
 
 .imgSpecContainer .leftCard .ticketContainer button {
@@ -38,6 +40,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 30px;
 }
 
 .imgSpecContainer .leftCard > div:not(:last-child), .imgSpecContainer .rightCard > div:not(:last-child) {
@@ -52,24 +55,45 @@
 .imgSpecContainer .rightCard .heading {
     font-size: 22px;
     line-height: 30px;
+    padding: 44px 18px 28px 18px;
 }
 
-.imgSpecContainer .rightCard .iconTextContainer {
+.imgSpecContainer .rightCard .iconTextDetailsContainer {
     display: flex;
 }
 
-.imgSpecContainer .rightCard .iconTextContainer > div:first-child {
-    /* flex: 2; */
-    min-width: 240px;
+.imgSpecContainer .rightCard .iconTextDetailsContainer .iconText,
+.imgSpecContainer .rightCard .iconTextDetailsContainer .details {
+    padding: 38px 32px;
+    box-sizing: border-box;
 }
 
-.imgSpecContainer .rightCard .iconTextContainer > div:last-child {
+.imgSpecContainer .rightCard .iconTextDetailsContainer .iconText {
+    /* flex: 2; */
+    min-width: 240px;
+    display: flex;
+    align-items: center;
+}
+
+.imgSpecContainer .rightCard .iconTextDetailsContainer > div:nth-child(2) {
     flex: 1;
 }
 
 
-.imgSpecContainer .rightCard .iconTextContainer > div:not(:last-child){
+.imgSpecContainer .rightCard .iconTextDetailsContainer > div:not(:last-child){
     border-right:1px solid var(--main-dark);
+}
+
+.icon1 {
+    content:url('../../public/icons/icon-digital.svg');
+}
+
+.icon2 {
+    content:url('../../public/icons/icon-physical.png');
+}
+
+.icon3 {
+    content:url('../../public/icons/icon-membership.svg');
 }
 
 @media (max-width:700px){
@@ -80,8 +104,21 @@
     .imgSpecContainer .leftCard {
         border-right: 1px solid var(--main-dark);
     }
-
+    
     .imgSpecContainer .leftCard {
-        border-bottom: none;
+        border-bottom: 1px solid var(--main-dark);
+    }
+
+    .imgSpecContainer .rightCard {
+        margin-top: 35px;
+    }
+
+    .imgSpecContainer .rightCard .iconTextDetailsContainer .iconText {
+        width: 105px;
+    }
+
+    .imgSpecContainer .rightCard .iconTextDetailsContainer .iconText,
+    .imgSpecContainer .rightCard .iconTextDetailsContainer .details {
+        padding: 16px 10px;
     }
 }
