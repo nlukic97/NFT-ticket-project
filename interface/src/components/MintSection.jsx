@@ -36,21 +36,21 @@ const MintSection = () => {
                 <div>
                   <span><i>icon</i> text</span>
                 </div>
-                <div>two</div>
+                <div>With this ticket you can follow the event online and replays on the multiverse.</div>
               </div>
 
               <div className="iconTextContainer">
                 <div>
                   <span><i>icon</i> text</span>
                 </div>
-                <div>two</div>
+                <div>This ticket grants you entrance for the concert.</div>
               </div>
 
               <div className="iconTextContainer">
                 <div>
                   <span><i>icon</i> text</span>
                 </div>
-                <div>two</div>
+                <div>Buying this ticket you are white listed for the next events and you will access a lottery that can give you access to the backstage.</div>
               </div>
 
             </div>

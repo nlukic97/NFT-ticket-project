@@ -13,21 +13,22 @@
     display: flex;
     justify-content: space-between;
     font-family: "Inter",sans-serif;
+    padding: 0 40px;
 }
 
 .heroSection .left h1 {
     max-width: 530px;
-    margin-top: 10px;
+    margin-top: 50px;
 }
 
 .heroSection .left p {
     max-width: 455px;
 }
 
-.heroSection .left, .heroSection .right {
+/* .heroSection .left, .heroSection .right {
     padding: 0 40px;
+} */
 
-}
 .heroSection .right {
     position: relative;
     width: 56%;
@@ -67,11 +68,12 @@
         padding-top:0;
         flex-direction: column;
         align-items: center;
+        padding: 0;
     }
 
     .heroSection .left {
         order: 2;
-        padding: 0 0 0 10px;
+        padding: 0 25px;
     }
 
     .heroSection .left h1 {

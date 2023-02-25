@@ -10,6 +10,7 @@
     color: var(--main-dark);
     font-size: 18px;
     line-height: 20px;
+    padding: 0 40px;
 }
 
 .imgSpecContainer .leftCard {
@@ -56,6 +57,16 @@
 .imgSpecContainer .rightCard .iconTextContainer {
     display: flex;
 }
+
+.imgSpecContainer .rightCard .iconTextContainer > div:first-child {
+    /* flex: 2; */
+    min-width: 240px;
+}
+
+.imgSpecContainer .rightCard .iconTextContainer > div:last-child {
+    flex: 1;
+}
+
 
 .imgSpecContainer .rightCard .iconTextContainer > div:not(:last-child){
     border-right:1px solid var(--main-dark);
