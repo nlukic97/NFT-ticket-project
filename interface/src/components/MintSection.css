@@ -1,7 +1,13 @@
+.ticketSpecContainer {
+    background:url("../../public/images/vectorBg2.png") no-repeat -40px 0 /contain;
+    padding: 109px 40px;
+}
+
 .ticketSpec h2 {
     text-align: center;
     color: var(--font-dark);
-    margin: 109px 0;
+    margin: 0;
+    margin-bottom: 109px;
   }
 
 .imgSpecContainer {
@@ -10,8 +16,8 @@
     color: var(--main-dark);
     font-size: 18px;
     line-height: 20px;
-    padding: 0 40px;
     margin-bottom: 140px;
+    background-color: #fff;
 }
 
 .imgSpecContainer .leftCard {
@@ -111,6 +117,10 @@
 }
 
 @media (max-width:700px){
+    .ticketSpecContainer {
+        background:url("../../public/images/vectorBg2.png") no-repeat -150px 0 /contain;
+    }
+
     .imgSpecContainer {
         display: block;
     }

@@ -9,7 +9,7 @@ const MintSection = () => {
   },[imageToShow])
 
   return (
-    <div>
+    <div className='ticketSpecContainer'>
         <div className="container ticketSpec">
           <h2>NFT ticket specifications</h2>
 
@@ -29,7 +29,7 @@ const MintSection = () => {
                   ?
                   <img src="./images/ticket.png" alt="NFT ticket" />
                   :
-                  // style this component
+                  // todo - create this component
                   <div style={{width:'80%',height:'50%',border:'1px solid red'}}>TODO - create component</div>
                 }
 
