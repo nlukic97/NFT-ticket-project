@@ -1,0 +1,18 @@
+.imgSpecContainer {
+    display: flex;
+}
+
+.imgSpecContainer .imgCard {
+    border: 1px solid var(--main-dark);
+    border-right: none;
+    flex: 4;
+}
+
+.imgSpecContainer .specCard {
+    border: 1px solid var(--main-dark);
+    flex: 6;
+}
+
+.imgSpecContainer .imgCard > div:not(:last-child), .imgSpecContainer .specCard > div:not(:last-child) {
+    border-bottom: 1px solid var(--main-dark);
+}
