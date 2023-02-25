@@ -9,18 +9,32 @@ const MintSection = () => {
           {/* Contains both of the tables */}
           <div className="imgSpecContainer">
 
-            <div className="imgCard">
-              <div>
-                <img src="" alt="some img" />
+            <div className="leftCard">
+              {/* image and arrows */}
+              <div className="ticketContainer">
+                <button>&#60;</button>
+                <img src="./images/ticket.png" alt="some img" />
+                <button>&#62;</button>
               </div>
-              <div>
+
+              {/* price and mint btn */}
+              <div className="priceAndBtnContainer">
                 <p>text</p>
+                <button>Mint Ticket</button>
               </div>
             </div>
 
-            <div className="specCard">
-              <div>e</div>
-              <div>
+            <div className="rightCard">
+              <div>SPECIFICATIONS</div>
+              <div className="iconTextContainer">
+                <div>one</div>
+                <div>two</div>
+              </div>
+              <div className="iconTextContainer">
+                <div>one</div>
+                <div>two</div>
+              </div>
+              <div className="iconTextContainer">
                 <div>one</div>
                 <div>two</div>
               </div>

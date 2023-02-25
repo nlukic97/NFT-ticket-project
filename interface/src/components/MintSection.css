@@ -2,17 +2,54 @@
     display: flex;
 }
 
-.imgSpecContainer .imgCard {
+.imgSpecContainer .leftCard {
     border: 1px solid var(--main-dark);
     border-right: none;
     flex: 4;
 }
 
-.imgSpecContainer .specCard {
+.imgSpecContainer .leftCard .ticketContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.imgSpecContainer .ticketContainer img {
+    width: 80%;
+}
+
+.imgSpecContainer .leftCard .priceAndBtnContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imgSpecContainer .leftCard > div:not(:last-child), .imgSpecContainer .rightCard > div:not(:last-child) {
+    border-bottom: 1px solid var(--main-dark);
+}
+
+.imgSpecContainer .rightCard {
     border: 1px solid var(--main-dark);
     flex: 6;
 }
 
-.imgSpecContainer .imgCard > div:not(:last-child), .imgSpecContainer .specCard > div:not(:last-child) {
-    border-bottom: 1px solid var(--main-dark);
+.imgSpecContainer .rightCard .iconTextContainer {
+    display: flex;
+}
+
+.imgSpecContainer .rightCard .iconTextContainer > div:not(:last-child){
+    border-right:1px solid var(--main-dark);
+}
+
+@media (max-width:700px){
+    .imgSpecContainer {
+        display: block;
+    }
+
+    .imgSpecContainer .leftCard {
+        border-right: 1px solid var(--main-dark);
+    }
+
+    .imgSpecContainer .leftCard {
+        border-bottom: none;
+    }
 }
