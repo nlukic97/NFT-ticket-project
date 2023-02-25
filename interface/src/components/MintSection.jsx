@@ -9,7 +9,9 @@ const MintSection = () => {
           {/* Contains both of the tables */}
           <div className="imgSpecContainer">
 
+            {/* left card */}
             <div className="leftCard">
+
               {/* image and arrows */}
               <div className="ticketContainer">
                 <button>&#60;</button>
@@ -19,28 +21,42 @@ const MintSection = () => {
 
               {/* price and mint btn */}
               <div className="priceAndBtnContainer">
-                <p>text</p>
-                <button>Mint Ticket</button>
+                <p>Price: 0.001 AXAV</p>
+                <button className="blueBtn">Mint Now</button>
               </div>
+
             </div>
 
+            {/* right card */}
             <div className="rightCard">
-              <div>SPECIFICATIONS</div>
+
+              <div className="heading">SPECIFICATIONS</div>
+
               <div className="iconTextContainer">
-                <div>one</div>
+                <div>
+                  <span><i>icon</i> text</span>
+                </div>
                 <div>two</div>
               </div>
+
               <div className="iconTextContainer">
-                <div>one</div>
+                <div>
+                  <span><i>icon</i> text</span>
+                </div>
                 <div>two</div>
               </div>
+
               <div className="iconTextContainer">
-                <div>one</div>
+                <div>
+                  <span><i>icon</i> text</span>
+                </div>
                 <div>two</div>
               </div>
+
             </div>
 
           </div>
+          
         </div>
     </div>
   )

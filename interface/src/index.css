@@ -62,14 +62,6 @@ body {
   text-align: center;
 }
 
-/* ticketSpec section */
-.ticketSpec h2 {
-  text-align: center;
-  color: var(--font-dark);
-  margin: 109px 0;
-}
-
-
 /* footer */
 footer {
   margin: 0;
@@ -96,5 +88,26 @@ footer .logo {
 
 footer p {
   margin-bottom: 3px;
+}
+
+/* Blue button component */
+.blueBtn {
+  padding: 8px 18px;
+  display: inline-block;
+  background-color: var(--main-light);
+  color: #fff;
+  font-size: 14px;
+  font-family: Arial,sans-serif;
+  border-radius: 10px;
+  border: none;
+}
+
+.blueBtn:hover {
+  cursor: pointer;
+  background-color: #2659FF;
+}
+
+.blueBtn:active {
+  background-color: var(--main-light);
 }
 

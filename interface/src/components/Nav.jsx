@@ -21,7 +21,7 @@ const Nav = () => {
 
             <ul className={ hideMobileMenu ? "hiddenOnSmallScreen":null}>
                 <li><a href="./">About</a></li>
-                <li><button>Connect Wallet</button></li>
+                <li><button className='blueBtn'>Connect Wallet</button></li>
             </ul>
         </nav >
     </div>
