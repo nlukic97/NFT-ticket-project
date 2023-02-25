@@ -22,7 +22,7 @@ const MintSection = () => {
               {/* price and mint btn */}
               <div className="priceAndBtnContainer">
                 <p>Price: 0.001 AXAV</p>
-                <button className="blueBtn">Mint Now</button>
+                <button className="blueBtn" onClick={()=> alert('Clicked MINT button')}>Mint Now</button>
               </div>
 
             </div>
