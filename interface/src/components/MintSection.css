@@ -24,12 +24,26 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 368px; /* todo check if this is as it should be */
+    height: calc(100% - 56px); /* todo check if this is as it should be. This is the width of the lower box */
 }
 
 .imgSpecContainer .leftCard .ticketContainer button {
     background-color: transparent;
     border:none;
+}
+
+.imgSpecContainer .leftCard .ticketContainer button:first-child i,
+.imgSpecContainer .leftCard .ticketContainer button:last-child i {
+    content: url("../../public/icons/arrow.png");
+    /* width: 38px; */
+}
+
+.imgSpecContainer .leftCard .ticketContainer button:first-child i {
+    transform: rotate(180deg);
+}
+
+.ticketContainer .phantomDiv {
+    width: 33px; /* same width as arrow button with its padding */
 }
 
 .imgSpecContainer .ticketContainer img {

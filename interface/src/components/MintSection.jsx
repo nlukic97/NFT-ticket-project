@@ -1,6 +1,13 @@
+import {useState, useEffect} from 'react';
 import "./MintSection.css";
 
 const MintSection = () => {
+  const [imageToShow,setImageToShow] = useState(1) // toggle between 1 and 2
+  useEffect(()=>{
+    console.log('changed the thing');
+    console.log(imageToShow)
+  },[imageToShow])
+
   return (
     <div>
         <div className="container ticketSpec">
@@ -14,9 +21,20 @@ const MintSection = () => {
 
               {/* image and arrows */}
               <div className="ticketContainer">
-                <button>&#60;</button>
-                <img src="./images/ticket.png" alt="some img" />
-                <button>&#62;</button>
+                {/* show left arrow btn, or insert phantom div */}
+                {(imageToShow === 2) ? <button onClick={()=> setImageToShow(1)}><i></i></button> : <div className='phantomDiv'></div>}
+
+                {/* Toggle component to display - NFT ticket or info on NFT ticket */}
+                {(imageToShow === 1)
+                  ?
+                  <img src="./images/ticket.png" alt="NFT ticket" />
+                  :
+                  // style this component
+                  <div style={{width:'80%',height:'50%',border:'1px solid red'}}>TODO - create component</div>
+                }
+
+                {/* show right arrow btn, or insert phantom div */}
+                {(imageToShow === 1 )? <button onClick={()=> setImageToShow(2)}><i></i></button> : <div className='phantomDiv'></div>}
               </div>
 
               {/* price and mint btn */}

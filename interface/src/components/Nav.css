@@ -40,7 +40,7 @@ nav #hamburgerBtn .line {
     transform: translateY(-50%);
     position: relative;
     border-radius: 100px;
-    transition: 0.2s ease 0.2s;
+    transition: 0.2s ease-out 0.1s;
 }
 
 nav #hamburgerBtn .line::before, nav #hamburgerBtn .line::after {
@@ -64,7 +64,7 @@ nav #hamburgerBtn .line::after {
 }
 
 nav #hamburgerBtn .line.openMobileMenu {
-    transform: translateY(-50%) rotate(-45deg);
+    transform: translateY(-50%) rotate(-135deg);
 }
 
 nav #hamburgerBtn .line.openMobileMenu::before, nav #hamburgerBtn .line.openMobileMenu::after {
