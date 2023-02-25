@@ -2,7 +2,7 @@ import {useState} from 'react'
 import Logo from './Logo'
 import "./Nav.css"
 
-const Nav = () => {
+const Nav = ({openModal}) => {
   const [hideMobileMenu, setHideMobileMenu] = useState(true)
   
   function toggleMobileMenu(){
@@ -21,7 +21,7 @@ const Nav = () => {
 
             <ul className={ hideMobileMenu ? "hiddenOnSmallScreen":null}>
                 <li><a href="./">About</a></li>
-                <li><button className='blueBtn' onClick={()=> alert('Clicked ConnectWallet button')}>Connect Wallet</button></li>
+                <li><button className='blueBtn' onClick={openModal}>Connect Wallet</button></li>
             </ul>
         </nav >
     </div>
