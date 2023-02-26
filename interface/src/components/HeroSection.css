@@ -1,7 +1,7 @@
 /* hero section */
 .heroContainer {
     background-color: #051849;
-    background-image: url('../../public/images/vectorBg1.png'); /* todo sort this bg out*/
+    background-image: url('../../public/images/vectorBg1.png');
     background-repeat: no-repeat;
     background-size: 120% auto;
     background-position:bottom left;
@@ -59,7 +59,6 @@
 @media (max-width: 700px){
     .heroContainer {
         padding: 0 0 140px 0;
-        /* todo - sort out display */
         background-size: cover;
         background-position: bottom 0 left 28%;
     }

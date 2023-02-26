@@ -35,7 +35,6 @@ const MintSection = () => {
               </div>
 
               {/* price and mint btn */}
-              {/* todo - this should be at the bottom of the page, maybe flex? */}
               <div className="priceAndBtnContainer">
                 <p>Price: 0.001 AXAV</p>
                 <MintNFTBtn/>

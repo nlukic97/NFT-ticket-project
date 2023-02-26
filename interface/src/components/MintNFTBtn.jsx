@@ -3,7 +3,7 @@ import { usePrepareContractWrite, useContractWrite } from 'wagmi'
 
 const MintNFTBtn = () => {
     const { config } = usePrepareContractWrite({
-        address: '0xFBA3912Ca04dd458c843e2EE08967fC04f3579c2', // todo replace this, and the abi underneath
+        address: '0xFBA3912Ca04dd458c843e2EE08967fC04f3579c2', // todo replace this with real address, and add the abi underneath
         abi: [
           {
             name: 'mint',
