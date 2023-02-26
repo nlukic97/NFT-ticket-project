@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 import "./index.css"
+
+// eslint-disable-next-line no-unused-vars
+import polyfills from "./polyfills"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -7,6 +7,9 @@ import HeroSection from './components/HeroSection'
 import MintSection from './components/MintSection'
 import Modal from './components/Modal'
 
+import { client } from './wagmi.js'
+import { WagmiConfig } from 'wagmi'
+
 const App = () => {
   const [modalOpen, setModalOpen] = useState(false)
 
@@ -21,7 +24,7 @@ const App = () => {
   }
   
   return (
-    <div>      
+    <WagmiConfig client={client}>      
       {modalOpen ? <Modal closeModal={closeModal}/> : null}
       
       <Banner />
@@ -37,7 +40,7 @@ const App = () => {
         <p>Terms of Service Privacy Policy</p>
         <p>&copy; 2022 Infinity Admission</p>
       </footer>
-    </div>
+    </WagmiConfig>
     )
   }
   

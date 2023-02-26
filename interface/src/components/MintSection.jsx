@@ -1,12 +1,9 @@
-import {useState, useEffect} from 'react';
+import { useState } from 'react';
+import MintNFTBtn from './MintNFTBtn';
 import "./MintSection.css";
 
 const MintSection = () => {
   const [imageToShow,setImageToShow] = useState(1) // toggle between 1 and 2
-  useEffect(()=>{
-    console.log('changed the thing');
-    console.log(imageToShow)
-  },[imageToShow])
 
   return (
     <div className='ticketSpecContainer'>
@@ -41,7 +38,7 @@ const MintSection = () => {
               {/* todo - this should be at the bottom of the page, maybe flex? */}
               <div className="priceAndBtnContainer">
                 <p>Price: 0.001 AXAV</p>
-                <button className="blueBtn" onClick={()=> alert('Clicked MINT button')}>Mint Now</button>
+                <MintNFTBtn/>
               </div>
 
             </div>
