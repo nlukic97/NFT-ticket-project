@@ -111,3 +111,11 @@ footer p {
   background-color: var(--main-light);
 }
 
+.blueBtn.disabled {
+  background-color: #bab7b7;
+}
+
+.blueBtn.disabled:hover {
+  cursor: default
+}
+

@@ -1,8 +1,13 @@
-import { useNetwork, useSwitchNetwork } from 'wagmi'
+import { useNetwork } from 'wagmi'
 import { usePrepareContractWrite, useContractWrite } from 'wagmi'
+import { useAccount } from 'wagmi'
 // todo import abi here
 
 const MintNFTBtn = () => { 
+    const {isConnected} = useAccount()
+
+    const { chain } = useNetwork()
+    
     const { config } = usePrepareContractWrite({
         address: '0xFBA3912Ca04dd458c843e2EE08967fC04f3579c2', // todo replace this with real address, and add the abi underneath
         abi: [
@@ -18,7 +23,6 @@ const MintNFTBtn = () => {
       }
     )
 
-    // code to change network
     const { write } = useContractWrite(config)
 
     /* const { chain } = useNetwork()
@@ -33,7 +37,13 @@ const MintNFTBtn = () => {
     } */
     
     return (
-        <button className='blueBtn' disabled={!write} onClick={()=> write?.()}>Mint Now</button>
+        <button 
+          className={write && isConnected && !chain?.unsupported ? "blueBtn" : "blueBtn disabled"} 
+          disabled={!write || chain?.unsupported} 
+          onClick={()=> write?.()}
+        >
+          Mint Now
+        </button>
     )
 }
 

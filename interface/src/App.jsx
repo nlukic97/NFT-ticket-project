@@ -5,7 +5,7 @@ import Banner from './components/Banner'
 import Logo from './components/Logo'
 import HeroSection from './components/HeroSection'
 import MintSection from './components/MintSection'
-import Modal from './components/Modal'
+import ConnectWalletModal from './components/ConnectWalletModal'
 
 import { client } from './wagmi.js'
 import { WagmiConfig } from 'wagmi'
@@ -41,7 +41,7 @@ const App = () => {
   
   return (
     <WagmiConfig client={client}>      
-      <Modal isModalOpen={modalOpen} closeModal={closeModal}/>
+      <ConnectWalletModal isModalOpen={modalOpen} closeModal={closeModal}/>
       
       <Banner />
       

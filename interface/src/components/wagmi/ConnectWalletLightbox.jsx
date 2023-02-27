@@ -1,12 +1,12 @@
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
 
-export function Connect({closeModal}) {
-  const { connector, isConnected } = useAccount()
-  
-  const { connect, connectors, error, isLoading, pendingConnector } = useConnect({
+export function ConnectWalletLightbox({closeModal}) {
+  const { isConnected } = useAccount()
+
+  const { connect, connectors } = useConnect({
     onSuccess(){
       closeModal()
-    }
+    },
   })
 
   const { disconnect } = useDisconnect({
@@ -34,7 +34,6 @@ export function Connect({closeModal}) {
           </button>
         )}
 
-      {/* {error && <div>{error.message}</div>} */}
     </div>
   )
 }
