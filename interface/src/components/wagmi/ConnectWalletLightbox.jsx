@@ -1,4 +1,6 @@
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
+import Logo from "../Logo"
+import "./ConnectWalletLightbox.css"
 
 export function ConnectWalletLightbox({closeModal}) {
   const { isConnected } = useAccount()
@@ -16,13 +18,19 @@ export function ConnectWalletLightbox({closeModal}) {
   })
 
   return (
-    <div className='modalBox' onClick={(e)=> e.stopPropagation()}>
+    <div className='lightBox' onClick={(e)=> e.stopPropagation()}>
+        <div className="logoContainer">
+          <Logo/>
+        </div>
+        
+        <h3 className='connectHeading'>Connect your wallet</h3>
 
         {connectors.filter((x) => x.ready)
           .map((x) => (
             // only allow connect on click if not already connected, otherwise button is inactive
             <button key={x.id} className={(x.name+"Btn")} onClick={() => !isConnected ? connect({ connector: x }) : null}>
-              {x.name}
+              <i></i>
+              <span>{x.name}</span>
             </button>
           )
         )}
@@ -30,7 +38,8 @@ export function ConnectWalletLightbox({closeModal}) {
         {/* disconnect wallet button */}
         {isConnected && (
           <button className='disconnectWalletBtn' onClick={() => disconnect()}>
-            Disconnect Wallet
+            <i></i>
+            <span>Disconnect Wallet</span>
           </button>
         )}
 

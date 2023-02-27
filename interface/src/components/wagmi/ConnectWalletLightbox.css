@@ -1,0 +1,93 @@
+.lightBox {
+    background-color: var(--main-dark);
+    width: 50%;
+    margin: 50px auto 0;
+    padding: 35px 170px;
+    border-radius: 20px;
+    max-width: 704px;
+    width: 80%;
+    box-sizing: border-box;
+    border: 1px solid rgba(1, 205, 153, 0.35);
+}
+
+.lightBox .logoContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.lightBox .connectHeading {
+    color: #fff;
+    font-family: "Inter",sans-serif;
+    font-size: 36px;
+    line-height: 43px;
+    text-align: center;
+    margin: 16px 0 32px 0;
+}
+
+.lightBox button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 184px;
+    background-color: #0C90FF;
+    color: #fff;
+    border-radius: 15px;
+    height: 57px;
+    width: 100%;
+    margin: 28px 0;
+    padding: 25px 20px;
+    box-sizing: border-box;
+}
+
+.lightBox button:hover {
+    cursor: pointer;
+}
+
+.lightBox button span {
+    font-size: 18px;
+    font-family: "Inter",sans-serif;
+    line-height: 21px;
+}
+
+.MetaMaskBtn i {
+    content:url('../../../public/icons/connectWalletModal/metamask.png');
+    height: 50px;
+    display: inline-block;
+    margin-right: 26px;
+
+}
+
+.WalletConnectBtn i {
+    content:url('../../../public/icons/connectWalletModal/walletconnect.png');
+    height: 28px;
+    margin-left: 5px;
+    margin-right: 26px;
+    display: inline-block;
+}
+
+.disconnectWalletBtn i {
+    content:url('../../../public/icons/connectWalletModal/disconnectwallet.png');
+    width: 40px;
+    display: inline-block;
+    margin-left: 6px;
+    margin-right: 30px;
+}
+
+@media (max-width: 780px) {
+    .lightBox {
+        padding:35px 80px;
+    }
+}
+
+@media (max-width: 658px) {
+    .lightBox {
+        padding:35px 40px;
+    }
+}
+
+@media (max-width: 453px) {
+    .lightBox {
+        padding:35px 20px;
+        width: 90%;
+    }
+}

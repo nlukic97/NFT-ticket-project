@@ -6,28 +6,14 @@ body.modalOpen .modalOverlay {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color:rgba(2, 12, 36, 0.58);
     z-index: 4;
 }
 
 body.modalOpen {
     overflow: hidden;
+    
 }
-
-body .modalBox {
-    background-color: var(--main-dark);
-    width: 50%;
-    margin: 50px auto 0;
-    padding: 20px;
-    border-radius: 20px;
-}
-
-.modalBox button {
-    display: block;
-    margin: 10px auto;
-}
-
-
 
 .modalOverlay {
     display: none;
