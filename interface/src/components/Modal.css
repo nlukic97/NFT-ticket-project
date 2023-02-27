@@ -1,4 +1,4 @@
-body.modalOpen .modal {
+body.modalOpen .modalOverlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -10,4 +10,17 @@ body.modalOpen .modal {
 
 body.modalOpen {
     overflow: hidden;
+}
+
+.modalBox {
+    background-color: var(--main-dark);
+    width: 50%;
+    margin: 50px auto 0;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.modalBox button {
+    display: block;
+    margin: 10px auto;
 }

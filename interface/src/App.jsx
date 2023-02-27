@@ -8,10 +8,11 @@ import MintSection from './components/MintSection'
 import Modal from './components/Modal'
 
 import { client } from './wagmi.js'
-import { WagmiConfig } from 'wagmi'
+import { useAccount, WagmiConfig } from 'wagmi'
 
 const App = () => {
   const [modalOpen, setModalOpen] = useState(false)
+  const { isConnected } = useAccount()
 
   function openModal(){
     document.body.classList.add('modalOpen')
@@ -22,6 +23,17 @@ const App = () => {
     document.body.classList.remove('modalOpen')
     setModalOpen(false)
   }
+
+  // should fix this, as it will just close the wallet loading page
+  /* if(isConnected && modalOpen){
+    closeModal()
+  } */
+
+  window.addEventListener('keydown',function(event){
+    if(event.key === "Escape" && modalOpen === true){
+      closeModal()
+    }
+})
   
   return (
     <WagmiConfig client={client}>      

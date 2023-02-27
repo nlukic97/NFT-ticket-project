@@ -1,16 +1,14 @@
 import { Connect } from './wagmi/Connect'
-import { NetworkSwitcher } from './wagmi/NetworkSwitcher'
+// import { NetworkSwitcher } from './wagmi/NetworkSwitcher'
 import "./Modal.css"
-import { useAccount } from 'wagmi'
+// import { useAccount } from 'wagmi'
 
 const Modal = ({closeModal}) => {
-    const { isConnected } = useAccount()
+    // const { isConnected } = useAccount()
     return (
-        // <div className="modal" onClick={closeModal}>
-        <div className="modal">
+        <div className="modalOverlay" onClick={closeModal}>
             <Connect />
-            {isConnected ? <NetworkSwitcher/> : null}
-            <button onClick={closeModal}>CloseModal</button>
+            {/* {isConnected ? <NetworkSwitcher/> : null} */}
         </div>
     )
 }
