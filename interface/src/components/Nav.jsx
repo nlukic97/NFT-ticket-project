@@ -2,8 +2,11 @@ import {useState} from 'react'
 import Logo from './Logo'
 import "./Nav.css"
 
+import { useAccount} from 'wagmi'
+
 const Nav = ({openModal}) => {
   const [hideMobileMenu, setHideMobileMenu] = useState(true)
+  const {address, isConnected} = useAccount()
   
   function toggleMobileMenu(){
     setHideMobileMenu(!hideMobileMenu)
@@ -21,7 +24,16 @@ const Nav = ({openModal}) => {
 
             <ul className={ hideMobileMenu ? "hiddenOnSmallScreen":null}>
                 <li><a href="./">About</a></li>
-                <li><button className='blueBtn' onClick={openModal}>Connect Wallet</button></li>
+                <li>
+                  <button className='blueBtn' onClick={openModal}>
+                    {!isConnected ? 
+                      "Connect Wallet" 
+                      : 
+                      // displaying part of the address
+                      `${address.slice(0,6)}...${address.slice(42 - 3)}`
+                    }
+                  </button>
+                </li>
             </ul>
         </nav >
     </div>

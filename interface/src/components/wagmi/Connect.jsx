@@ -1,9 +1,19 @@
 import { useAccount, useConnect, useDisconnect } from 'wagmi'
 
-export function Connect() {
+export function Connect({closeModal}) {
   const { connector, isConnected } = useAccount()
-  const { connect, connectors, error, isLoading, pendingConnector } = useConnect()
-  const { disconnect } = useDisconnect()
+  
+  const { connect, connectors, error, isLoading, pendingConnector } = useConnect({
+    onSuccess(){
+      closeModal()
+    }
+  })
+
+  const { disconnect } = useDisconnect({
+    onSuccess(){
+      closeModal()
+    }
+  })
 
   return (
     <div className='modalBox' onClick={(e)=> e.stopPropagation()}>
