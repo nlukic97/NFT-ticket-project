@@ -26,7 +26,11 @@ describe("NftTicket", function () {
     // as defined in fixtures.ts
     expect(await this.ticket.name()).to.be.equal('Web3 Forever Ticket')
     expect(await this.ticket.symbol()).to.be.equal('W3FT')
-  })  
+  })
+  
+  it('should have mintingPrice set to 0.001 tokens',async function(){
+    expect(await this.ticket.mintingPrice()).to.be.equal(ethers.utils.parseEther("0.001"))
+  })
 
   it('should mint 1 nft to Alice\'s address when sufficient value of tokens are sent',async function() {
     const amountToSend = '0.001' // AVAX / Ether
