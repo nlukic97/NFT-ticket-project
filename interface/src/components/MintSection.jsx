@@ -55,7 +55,7 @@ const MintSection = () => {
 
               {/* price and mint btn */}
               <div className="priceAndBtnContainer">
-                <p>Price: 0.001 AXAV</p>
+                <p>Price: 0.001 AVAX</p>
                 <MintNFTBtn/>
               </div>
 

@@ -33,24 +33,37 @@ describe("NftTicket", function () {
     expect(await this.ticket.symbol()).to.be.equal('W3FT')
   })  
 
-  it('should mint 1 nft to Alice\'s address',async function() {
-    await expect(this.ticket.connect(this.signers.alice).mint()).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,0)
+  it('should mint 1 nft to Alice\'s address when sufficient value of tokens are sent',async function() {
+    const amountToSend = '0.001' // AVAX / Ether
+    const txOptions = {value: ethers.utils.parseEther(amountToSend)} // price of the NFT
+
+    await expect(this.ticket.connect(this.signers.alice).mint(txOptions)).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,0)
+  })
+
+  it('should revert nft mint when insufficient amount of tokens are sent',async function(){
+    await expect(this.ticket.mint()).to.be.revertedWithCustomError(this.ticket,"InsufficientTokenAmount")
+
+    // sending a tx with price that is lacking 0.0001 AVAX / Eth
+    const insufficientAmountToSend = '0.00099' // AVAX / Eth
+    const txOptions = {value: ethers.utils.parseEther(insufficientAmountToSend)} // price of the NFT
+
+    await expect(this.ticket.mint(txOptions)).to.be.revertedWithCustomError(this.ticket,"InsufficientTokenAmount")
   })
   
   it('tokenURI method should return the same URI for all tokenIds',async function(){
-    // hardcoded in smart contract
+    const amountToSend = '0.001' // AVAX / Ether
+    const txOptions = {value: ethers.utils.parseEther(amountToSend)} // price of the NFT
 
     // mingint three NFT's to Alice (tokenId's of 0, 1, and 2)
-    await expect(this.ticket.connect(this.signers.alice).mint()).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,0)
-    await expect(this.ticket.connect(this.signers.alice).mint()).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,1)
-    await expect(this.ticket.connect(this.signers.alice).mint()).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,2)
+    await expect(this.ticket.connect(this.signers.alice).mint(txOptions)).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,0)
+    await expect(this.ticket.connect(this.signers.alice).mint(txOptions)).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,1)
+    await expect(this.ticket.connect(this.signers.alice).mint(txOptions)).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,2)
 
     // getting URI's for minted tokens
     const nftUri0 = await this.ticket.tokenURI(0)
     const nftUri1 = await this.ticket.tokenURI(1)
     const nftUri2 = await this.ticket.tokenURI(2)
 
-    
     expect(nftUri0).to.be.equal(nftUri1).and.to.be.equal(nftUri2).and.to.be.equal(defaultTokenURI)
   })
 
@@ -59,16 +72,40 @@ describe("NftTicket", function () {
   })
 
   it('should return correct tokenURI returned for minted token',async function(){
-    await expect(this.ticket.connect(this.signers.alice).mint()).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,0)
+    const amountToSend = '0.001' // AVAX / Ether
+    const txOptions = {value: ethers.utils.parseEther(amountToSend)} // price of the NFT
+    
+    await expect(this.ticket.connect(this.signers.alice).mint(txOptions)).to.emit(this.ticket,"TicketMinted").withArgs(this.signers.alice.address,0)
     expect(await this.ticket.tokenURI(0)).to.be.equal(defaultTokenURI)
   })
   
   it('should revert mint exceeding the max token amount',async function(){
-    // max amount is set to 3 in our fixtures during deployment
-    await this.ticket.connect(this.signers.alice).mint()
-    await this.ticket.connect(this.signers.alice).mint()
-    await this.ticket.connect(this.signers.alice).mint()
+    const amountToSend = '0.001' // AVAX / Ether
+    const txOptions = {value: ethers.utils.parseEther(amountToSend)} // price of the NFT
+
+    // max amount is set to 3 in our fixtures during deployment, so only these three should be able to mint
+    await this.ticket.connect(this.signers.alice).mint(txOptions)
+    await this.ticket.connect(this.signers.alice).mint(txOptions)
+    await this.ticket.connect(this.signers.alice).mint(txOptions)
 
     await expect(this.ticket.mint()).to.be.revertedWithCustomError(this.ticket,"NoMoreTicketsLeft")
+  })
+
+  it('should revert withdraw from non owner address',async function(){
+    await expect(this.ticket.connect(this.signers.alice).withdraw()).to.be.revertedWith("Ownable: caller is not the owner")
+  })
+  
+  it('should revert withdraw when no funds have been deposited',async function(){
+    await expect(this.ticket.connect(this.signers.owner).withdraw()).to.be.revertedWith("No funds to withdraw")
+  })
+  
+  it('should allow owner to withdraw funds deposited to contract',async function(){
+    const amountToSend = '0.001' // AVAX / Ether
+    const txOptions = {value: ethers.utils.parseEther(amountToSend)} // price of the NFT
+
+    // minting an NFT which will deposit 0.001 token
+    await this.ticket.connect(this.signers.alice).mint(txOptions)
+
+    await expect(this.ticket.connect(this.signers.owner).withdraw()).to.emit(this.ticket,"FundsWithdrawn")
   })
 });
