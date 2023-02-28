@@ -1,7 +1,6 @@
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
-
-// import "./tasks/index"
+import "hardhat-gas-reporter"
 
 import { resolve } from "path";
 import { config as dotenvConfig } from "dotenv";
@@ -22,7 +21,19 @@ const forkingData = FORK_FUJI ? {
 } : undefined
 
 const config: HardhatUserConfig = {
-  solidity: "0.8.17",
+  solidity: {
+    version:"0.8.17",
+    settings:{
+      optimizer:{
+        enabled:true,
+        runs:1000
+      }
+    }
+  },
+  gasReporter: {
+    currency: 'ETH',
+    enabled: (process.env.REPORT_GAS) ? true : false
+  },
   networks: {
     hardhat: {
       gasPrice: 225000000000,

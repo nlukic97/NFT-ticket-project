@@ -1,7 +1,7 @@
 # NFT ticket project smart contracts
 The hardhat project for the NFT Ticket minting page for the Web3 Forever event.
 
-Avalanche deployment address: 
+Deployment and verified at: https://snowtrace.io/address/0x5a9e0072C10e2917F890DD5b36a1E6c1e8F6D2E2#code 
 
 ## Local Setup
 
@@ -19,6 +19,7 @@ Next, set the following variables in the .env file:
 ```md
 MNEMONIC=<your_twelve_word_wallet_mnemonic_should_go_here>
 SNOWTRACE_API_KEY=<api_key_from_snowtrace_explorer>
+REPORT_GAS=<true or false>
 ```
 
 Finally, you may run the following commands:
