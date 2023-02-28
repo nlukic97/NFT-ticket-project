@@ -37,7 +37,7 @@ const config: HardhatUserConfig = {
         mnemonic
       }
     },
-    fuji: {
+    avalancheFujiTestnet: {
       url: 'https://api.avax-test.network/ext/bc/C/rpc',
       gasPrice: 225000000000,
       chainId: 43113,
@@ -49,7 +49,7 @@ const config: HardhatUserConfig = {
         passphrase: "",
       },
     },
-    mainnet: {
+    avalanche: {
       url: 'https://api.avax.network/ext/bc/C/rpc',
       gasPrice: 225000000000,
       chainId: 43114,
@@ -60,6 +60,12 @@ const config: HardhatUserConfig = {
         count: 20,
         passphrase: "",
       },
+    }
+  },
+  etherscan:{
+    apiKey:{
+      avalancheFujiTestnet: process.env.SNOWTRACE_API_KEY || "",
+      avalanche: process.env.SNOWTRACE_API_KEY || "",
     }
   }
 }

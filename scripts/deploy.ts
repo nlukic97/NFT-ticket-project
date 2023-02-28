@@ -6,6 +6,8 @@ export async function main() {
   const tokenSymbol = "W3FT"
   const maxTokenAmount = 5000;
 
+  console.log('Deploying contract...\n')
+
   const NftTicketFactory = await ethers.getContractFactory("NftTicket");
   const Ticket = await NftTicketFactory.deploy(tokenName,tokenSymbol, maxTokenAmount);
   
