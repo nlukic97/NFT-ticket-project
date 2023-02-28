@@ -16,9 +16,13 @@
     padding: 0 40px;
 }
 
+.heroSection .left {
+    margin-right: 15px;
+}
+
 .heroSection .left h1 {
     max-width: 530px;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .heroSection .left p {
@@ -31,7 +35,7 @@
 
 .heroSection .right {
     position: relative;
-    width: 56%;
+    width: 54%;
     /* margin-right: 10px; */
 }
 
@@ -56,7 +60,7 @@
     border-radius:20px;
 } */
 
-@media (max-width: 700px){
+@media (max-width: 830px){
     .heroContainer {
         padding: 0 0 140px 0;
         background-size: cover;
@@ -72,7 +76,8 @@
 
     .heroSection .left {
         order: 2;
-        padding: 0 25px;
+        padding: 50px 25px 0;
+        margin-right: 0;
     }
 
     .heroSection .left h1 {

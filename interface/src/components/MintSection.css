@@ -1,6 +1,6 @@
 .ticketSpecContainer {
     background:url("../../public/images/vectorBg2.png") no-repeat -40px 0 /contain;
-    padding: 109px 40px;
+    padding: 109px 40px 0;
 }
 
 .ticketSpec h2 {
@@ -12,7 +12,7 @@
 
 .imgSpecContainer {
     display: flex;
-    font-family: "Lato",sans-serif; /* todo check this font */
+    font-family: "Inter",sans-serif;
     color: var(--main-dark);
     font-size: 18px;
     line-height: 20px;
@@ -30,7 +30,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: calc(100% - 56px); /* todo check if this is as it should be. This is the width of the lower box. Should be ok. */
+    height: calc(100% - 56px);
 }
 
 .imgSpecContainer .leftCard .ticketContainer button {
@@ -54,6 +54,25 @@
 
 .imgSpecContainer .ticketContainer img {
     width: 80%;
+}
+
+.imgSpecContainer .ticketContainer .metadata {
+    /* style={{width:'80%',height:'50%',border:'1px solid red'}} */
+    width: 80%;
+    height: 50%;
+    border: 2px solid #2D2815;
+    border-radius: 10px;
+}
+
+.imgSpecContainer .ticketContainer .metadata h4 {
+    border-bottom: 2px solid #2D2815;
+    text-align: center;
+    margin: 0;
+    padding: 14px 0 12px 0;
+    font-size: 12px;
+    line-height: 14.52px;
+    font-family: "Inter",sans-serif;
+    font-weight: 400;
 }
 
 .imgSpecContainer .leftCard .priceAndBtnContainer {
@@ -174,6 +193,14 @@
     }
 
     @media (max-width:462px) {
+        .ticketSpecContainer {
+            padding: 50px 20px 0;
+        }
+        .ticketSpecContainer .ticketSpec > h2 {
+            font-size: 32px;
+            line-height: 38px;
+            margin-bottom: 36px;
+        }
         .imgSpecContainer .rightCard .iconTextDetailsContainer {
             grid-template-columns: repeat(2,1fr);
         }

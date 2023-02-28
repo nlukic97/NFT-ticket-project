@@ -27,7 +27,26 @@ const MintSection = () => {
                   <img src="./images/ticket.png" alt="NFT ticket" />
                   :
                   // todo - create this component
-                  <div style={{width:'80%',height:'50%',border:'1px solid red'}}>TODO - create component</div>
+                  <div className="metadata">
+                    <h4>Metadata</h4>
+                    <div>
+                      <p>Properties</p>
+                      
+                      <div>
+                        <span>Rarity 100%</span>
+                        <span>Place no. 45</span>
+                      </div>
+                      
+                      <div>
+                        <span>Star Arena</span>
+                        <span>21/06/2024</span>
+                      </div>
+
+                      <p>Description</p>
+                      <p>lorem15</p>
+
+                    </div>
+                  </div>
                 }
 
                 {/* show right arrow btn, or insert phantom div */}

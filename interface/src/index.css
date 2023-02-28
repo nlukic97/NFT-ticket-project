@@ -14,7 +14,7 @@ html {
 
 h1 {
   font-size: 56px;
-  line-height: 69px; /* It was originally 69.17px but rounded all values, did the same for all line heights in task */
+  line-height: 69px;
   font-weight: 900;
   font-family: "Inter",sans-serif; /* todo change to inter black */
 }
