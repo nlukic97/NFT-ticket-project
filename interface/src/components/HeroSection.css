@@ -98,6 +98,14 @@
         object-fit: cover;
     }
 
+    .heroSection .right {
+        height: auto;
+    }
+
+    .heroSection .imgWrapper {
+        height: unset;
+    }
+
     .heroSection .imgWrapper::after {
         display: none;
     }
