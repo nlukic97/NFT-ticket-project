@@ -7,11 +7,6 @@ import { deployNftTicketFixture } from "./shared/fixtures";
 const defaultTokenURI = "https://bafkreigir6ghsggfh6nnqbhccmuornvbogtpapgfek6oyu4hzpru6fnmje.ipfs.nftstorage.link"
 
 describe("NftTicket", function () {
-  // We define a fixture to reuse the same setup in every test.
-  // We use loadFixture to run this setup once, snapshot that state,
-  // and reset Hardhat Network to that snapshot in every test.
-  const maxTokenAmount = 5000;
-
   this.beforeAll(async function(){
     const [owner, alice, bob] = await ethers.getSigners();
     
