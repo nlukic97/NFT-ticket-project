@@ -7,5 +7,11 @@
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.8.1"
+  },
+  "scripts": {
+    "clean":"npx hardhat clean",
+    "compile":"npx hardhat compile",
+    "typechain":"npx hardhat typechain",
+    "test":"npx hardhat test"
   }
 }

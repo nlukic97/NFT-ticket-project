@@ -32,7 +32,7 @@ contract NftTicket is ERC721, Ownable {
     /// @dev Overriding method to return same url for all NFT's
     function tokenURI(uint256 _tokenId) public view override returns(string memory){
         require(_exists(_tokenId), "ERC721Metadata: URI query for nonexistent token");
-        return "https://bafkreigir6ghsggfh6nnqbhccmuornvbogtpapgfek6oyu4hzpru6fnmje.ipfs.nftstorage.link"; // or should it be this: ipfs://bafkreigir6ghsggfh6nnqbhccmuornvbogtpapgfek6oyu4hzpru6fnmje
+        return "https://bafkreigir6ghsggfh6nnqbhccmuornvbogtpapgfek6oyu4hzpru6fnmje.ipfs.nftstorage.link";
     }
 
     /// @notice Mints an NFT to a wallet address

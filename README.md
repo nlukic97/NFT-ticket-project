@@ -1,13 +1,35 @@
-# Sample Hardhat Project
+# NFT ticket project smart contracts
+The hardhat project for the NFT Ticket minting page for the Web3 Forever event.
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Avalanche deployment address: 
 
-Try running some of the following tasks:
+## Local Setup
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
+Open a terminal window in the root of this project and run the following commands:
+
+```
+npm install
+```
+```
+cp .env.example .env
+```
+
+Next, set the following variables in the .env file:
+
+```md
+MNEMONIC=<your_twelve_word_wallet_mnemonic_should_go_here>
+SNOWTRACE_API_KEY=<api_key_from_snowtrace_explorer>
+```
+
+Finally, you may run the following commands:
+```
+npm run compile
+```
+
+```
+npm run typechain
+```
+
+```
+npm run test
 ```
