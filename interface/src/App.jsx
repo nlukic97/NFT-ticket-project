@@ -56,6 +56,7 @@ const App = () => {
         <p>Terms of Service Privacy Policy</p>
         <p>&copy; 2022 Infinity Admission</p>
       </footer>
+      
     </WagmiConfig>
     )
   }

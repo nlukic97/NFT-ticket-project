@@ -23,17 +23,6 @@ const MintNFTBtn = () => {
     )
 
     const { write } = useContractWrite(config)
-
-    /* const { chain } = useNetwork()
-    const { chains, isLoading, pendingChainId, switchNetwork } = useSwitchNetwork()
-    
-    if (!chain) return null
-
-    if(switchNetwork){
-      if(chain?.unsupported === true && isLoading === false){
-        switchNetwork(chains[0].id) // switch to avalanche
-      }
-    } */
     
     return (
         <button 

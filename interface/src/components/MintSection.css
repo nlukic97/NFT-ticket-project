@@ -153,15 +153,6 @@
     margin-left: 10px;
 }
 
-/* .imgSpecContainer .rightCard .iconTextDetailsContainer .details {
-    flex: 4;
-}
-
-.imgSpecContainer .rightCard .iconTextDetailsContainer > div:nth-child(2) {
-    flex: 1;
-} */
-
-
 .imgSpecContainer .rightCard .iconTextDetailsContainer > div:not(:last-child){
     border-right:1px solid var(--main-dark);
 }

@@ -21,12 +21,11 @@ const MintSection = () => {
                 {/* show left arrow btn, or insert phantom div */}
                 {(imageToShow === 2) ? <button onClick={()=> setImageToShow(1)}><i></i></button> : <div className='phantomDiv'></div>}
 
-                {/* Toggle component to display - NFT ticket or info on NFT ticket */}
+                {/* Toggle component to display - NFT ticket image, or card with info about NFT ticket */}
                 {(imageToShow === 1)
                   ?
                   <img src="./images/ticket.png" alt="NFT ticket" />
                   :
-                  // todo - create this component
                   <div className="metadata">
                     <h3>METADATA</h3>
                     <div className='metadataDetails'>

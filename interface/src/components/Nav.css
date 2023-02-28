@@ -22,7 +22,6 @@ nav {
 nav #hamburgerBtn {
     display: none;
     width: 35px;
-    /* border: 1px solid red; */
     border: none;
     background-color: transparent;
     margin: 0;

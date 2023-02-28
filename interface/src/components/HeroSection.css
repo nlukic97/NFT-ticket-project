@@ -1,4 +1,3 @@
-/* hero section */
 .heroContainer {
     background-color: #051849;
     background-image: url('../../public/images/vectorBg1.png');
@@ -29,36 +28,33 @@
     max-width: 455px;
 }
 
-/* .heroSection .left, .heroSection .right {
-    padding: 0 40px;
-} */
-
 .heroSection .right {
     position: relative;
     width: 54%;
-    /* margin-right: 10px; */
 }
 
 .heroSection img {
-    /* width: 849px; */
     width: 100%;
     position: relative;
     z-index: 2;
-    border-radius: 20px; /* info - Added this just in case even though image has */
+    border-radius: 20px;
 }
 
-/* todo - outline component */
-/* .right::after {
+.heroSection .imgWrapper {
+    position: relative;
+}
+
+.heroSection .imgWrapper::after {
     content: "";
     position: absolute;
-    top: -6%;
-    right: -3%;
+    top: -10%;
+    right: -5%;
     width: 100%;
     height: 100%;
     z-index: 0;
     border:2px solid #064880;
     border-radius:20px;
-} */
+}
 
 @media (max-width: 830px){
     .heroContainer {
@@ -102,9 +98,7 @@
         object-fit: cover;
     }
 
-    /* todo - outline component */
-    /* .right::after {
+    .heroSection .imgWrapper::after {
         display: none;
-    } */
-
+    }
 }

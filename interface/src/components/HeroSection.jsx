@@ -13,7 +13,9 @@ const HeroSection = () => {
 
           
           <div className="right">
-            <img src="./images/band.png" alt="pang playing" />
+            <div className="imgWrapper">
+              <img src="./images/band.png" alt="band performing" />
+            </div>
           </div>
         </div>
     </div>

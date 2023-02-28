@@ -1,7 +1,7 @@
 import { ConnectWalletLightbox } from './wagmi/ConnectWalletLightbox'
 import "./ConnectWalletModal.css"
 
-const ConnectWalletModal = ({isModalOpen, closeModal}) => {
+const ConnectWalletModal = ({closeModal}) => {
     return (
         <div className={'modalOverlay'} onClick={closeModal}>
             <ConnectWalletLightbox closeModal={closeModal} />

@@ -29,7 +29,7 @@ const Nav = ({openModal}) => {
                     {!isConnected ? 
                       "Connect Wallet" 
                       : 
-                      // displaying part of the address
+                      // displaying part of the address (first 6 and last 3 chars)
                       `${address.slice(0,6)}...${address.slice(42 - 3)}`
                     }
                   </button>
