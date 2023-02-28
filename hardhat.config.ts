@@ -12,7 +12,7 @@ const mnemonic = process.env.MNEMONIC
 if(!mnemonic)  throw new Error('Please set the .env variable MNEMONIC')
 
 
-const FORK_FUJI = true
+const FORK_FUJI = false
 const FORK_MAINNET = false
 
 const forkingData = FORK_FUJI ? {
