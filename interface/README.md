@@ -14,12 +14,17 @@ cp .env.example .env
 
 Next, set the following variables in the .env file:
 
-```
+```md
 REACT_APP_INFURA_API_KEY= <infura_api_key>
 REACT_APP_PROJECT_ID= <wallet_connect_project_id>
-```
 
-After this, you may start the project:
+REACT_APP_CONTRACT_ADDRESS=<address_of_deployed_contract>
+```
+`Please note:` The address of the contract must be on the avalanche mainnet under the current configuration. If you would like to use a different chain, open the file ./src/wagmi.js to make the necessary updates.
+
+-----
+
+After this, you may run:
 
 ```
 npm run start
