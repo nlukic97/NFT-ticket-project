@@ -44,6 +44,10 @@
     /* width: 38px; */
 }
 
+.imgSpecContainer .leftCard .ticketContainer button:hover {
+    cursor: pointer;
+}
+
 .imgSpecContainer .leftCard .ticketContainer button:first-child i {
     transform: rotate(180deg);
 }
@@ -57,14 +61,17 @@
 }
 
 .imgSpecContainer .ticketContainer .metadata {
-    /* style={{width:'80%',height:'50%',border:'1px solid red'}} */
     width: 80%;
-    height: 50%;
+    /* height: 50%; */
     border: 2px solid #2D2815;
     border-radius: 10px;
 }
 
-.imgSpecContainer .ticketContainer .metadata h4 {
+.imgSpecContainer .ticketContainer .metadata .metadataDetails {
+    padding: 0 19px;
+}
+
+.imgSpecContainer .ticketContainer .metadata h3 {
     border-bottom: 2px solid #2D2815;
     text-align: center;
     margin: 0;
@@ -73,6 +80,33 @@
     line-height: 14.52px;
     font-family: "Inter",sans-serif;
     font-weight: 400;
+}
+
+.imgSpecContainer .ticketContainer .metadata h4 {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 23px;
+    margin: 10px 0;
+}
+
+.imgSpecContainer .ticketContainer .metadata .property {
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    padding: 6px 13px;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.imgSpecContainer .ticketContainer .metadata .property:nth-child(1),
+.imgSpecContainer .ticketContainer .metadata .property:nth-child(2) {
+    margin-bottom: 6px;
+}
+
+.imgSpecContainer .ticketContainer .metadata .descriptionP {
+    font-size: 16px;
+    line-height: 19px;
 }
 
 .imgSpecContainer .leftCard .priceAndBtnContainer {

@@ -28,22 +28,22 @@ const MintSection = () => {
                   :
                   // todo - create this component
                   <div className="metadata">
-                    <h4>Metadata</h4>
-                    <div>
-                      <p>Properties</p>
+                    <h3>METADATA</h3>
+                    <div className='metadataDetails'>
+                      <h4>Properties</h4>
                       
                       <div>
-                        <span>Rarity 100%</span>
-                        <span>Place no. 45</span>
+                        <span className='property'>Rarity 100%</span>
+                        <span className='property'>Place no. 45</span>
                       </div>
                       
                       <div>
-                        <span>Star Arena</span>
-                        <span>21/06/2024</span>
+                        <span className='property'>Star Arena</span>
+                        <span className='property'>21/06/2024</span>
                       </div>
 
-                      <p>Description</p>
-                      <p>lorem15</p>
+                      <h4>Description</h4>
+                      <p className='descriptionP'>This ticket is part of a 5,000 NFTs ticket collection, where each NFT represents an entry tiket for one person with unlimited access for the event: Web3 Forever</p>
 
                     </div>
                   </div>
