@@ -209,8 +209,7 @@
     }
 
     .imgSpecContainer .leftCard .ticketContainer {
-        padding-top: 70px;
-        padding-bottom: 60px;
+        min-height: 400px;
     }
 
     .imgSpecContainer .rightCard {
