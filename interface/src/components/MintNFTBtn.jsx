@@ -1,7 +1,11 @@
+import { ethers } from 'ethers'
 import { useNetwork } from 'wagmi'
 import { usePrepareContractWrite, useContractWrite } from 'wagmi'
 import { useAccount } from 'wagmi'
-// todo import abi here
+import abi from "../abis/NftTicketAbi.json"
+
+const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS
+if(!contractAddress) throw new Error("Please set the .env variable REACT_APP_CONTRACT_ADDRESS")
 
 const MintNFTBtn = () => { 
     const {isConnected} = useAccount()
@@ -9,17 +13,12 @@ const MintNFTBtn = () => {
     const { chain } = useNetwork()
     
     const { config } = usePrepareContractWrite({
-        address: '0xFBA3912Ca04dd458c843e2EE08967fC04f3579c2', // todo replace this with real address, and add the abi underneath
-        abi: [
-          {
-            name: 'mint',
-            type: 'function',
-            stateMutability: 'nonpayable',
-            inputs: [],
-            outputs: [],
-          },
-        ],
+        address: contractAddress,
+        abi,
         functionName: 'mint',
+        overrides:{
+          value: ethers.utils.parseEther('0.001')
+        }
       }
     )
 

@@ -16,21 +16,21 @@ h1 {
   font-size: 56px;
   line-height: 69px;
   font-weight: 900;
-  font-family: "Inter",sans-serif; /* todo change to inter black */
+  font-family: "Inter",sans-serif;
 }
 
 h2 {
   font-size: 48px;
   line-height: 59px;
   font-weight: 900;
-  font-family: "Inter",sans-serif; /* todo change to inter black */
+  font-family: "Inter",sans-serif;
 }
 
 h3 {
   font-size: 40px;
   line-height: 49px;
   font-weight: 900;
-  font-family: "Inter",sans-serif; /* todo change to inter black */
+  font-family: "Inter",sans-serif;
 }
 
 .body-text-1 {
@@ -81,7 +81,7 @@ footer p {
 }
 
 footer .logo {
-  width: min-content; /* todo check this again, fix the logic for the logo */
+  width: min-content;
   margin: 0 auto;
   margin-bottom: 14px;
 }

@@ -9,7 +9,7 @@
     align-items: center;
     font-size: 18px;
     line-height: 21.78px;
-    padding: 0 30px;
+    padding: 15px 30px;
 }
 
 .bannerInner button {
@@ -22,10 +22,27 @@
     line-height: 21.78px;
 }
 
-.bannerInner .text {
-    max-width: 1324px;
+.bannerInner .bannerText {
+    padding-right: 20px;
 }
 
 .bannerInner button:hover {
     cursor: pointer;
+}
+
+@media (max-width:500px){
+    .bannerInner {
+        display: block;
+        position: relative;
+    }
+
+    .bannerInner .bannerText {
+        margin-top: 20px;
+    }
+
+    .bannerInner button {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 }
