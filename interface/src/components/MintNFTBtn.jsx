@@ -16,8 +16,21 @@ const MintNFTBtn = () => {
         address: contractAddress,
         abi,
         functionName: 'mint',
-        overrides:{
-          value: ethers.utils.parseEther('0.001')
+        
+        // looks like this is the solution:
+        args:[
+          {
+            gasLimit:21000
+          }
+        ],
+        // overrides:{
+        //   value: ethers.utils.parseEther('0.001')
+        // },
+        onError(error){
+          console.log("Error",error)
+        },
+        onSettled(){
+          console.log('Settled!')
         }
       }
     )
