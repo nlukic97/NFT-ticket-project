@@ -1,4 +1,3 @@
-import { ethers } from 'ethers'
 import { useNetwork } from 'wagmi'
 import { usePrepareContractWrite, useContractWrite } from 'wagmi'
 import { useAccount } from 'wagmi'
@@ -26,12 +25,6 @@ const MintNFTBtn = () => {
         // overrides:{
         //   value: ethers.utils.parseEther('0.001')
         // },
-        onError(error){
-          console.log("Error",error)
-        },
-        onSettled(){
-          console.log('Settled!')
-        }
       }
     )
 

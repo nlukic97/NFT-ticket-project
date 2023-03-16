@@ -2,8 +2,22 @@ import { useState } from 'react';
 import MintNFTBtn from './MintNFTBtn';
 import "./MintSection.css";
 
+import { useContractRead } from 'wagmi';
+import abi from "../abis/NftTicketAbi.json"
+import { ethers } from 'ethers'
+
+const contractAddress = process.env.REACT_APP_CONTRACT_ADDRESS
+if(!contractAddress) throw new Error("Please set the .env variable REACT_APP_CONTRACT_ADDRESS")
+
 const MintSection = () => {
   const [imageToShow,setImageToShow] = useState(1) // toggle between 1 and 2
+
+  // geting current price for token mint from contract (a fallback for when I have a contract with a changable on chain price)
+  const { data } = useContractRead({
+    address: contractAddress,
+    abi,
+    functionName: 'mintingPrice',
+  })
 
   return (
     <div className='ticketSpecContainer'>
@@ -54,7 +68,7 @@ const MintSection = () => {
 
               {/* price and mint btn */}
               <div className="priceAndBtnContainer">
-                <p>Price: 0.001 AVAX</p>
+                <p>Price: {ethers.utils.formatEther(data.toNumber())} AVAX</p>
                 <MintNFTBtn/>
               </div>
 
