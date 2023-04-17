@@ -13,11 +13,11 @@ const MintSection = () => {
   const [imageToShow,setImageToShow] = useState(1) // toggle between 1 and 2
 
   // geting current price for token mint from contract (a fallback for when I have a contract with a changable on chain price)
-  const { data } = useContractRead({
+  /* const { data } = useContractRead({
     address: contractAddress,
     abi,
     functionName: 'mintingPrice',
-  })
+  }) */
 
   return (
     <div className='ticketSpecContainer'>
@@ -68,7 +68,8 @@ const MintSection = () => {
 
               {/* price and mint btn */}
               <div className="priceAndBtnContainer">
-                <p>Price: {ethers.utils.formatEther(data.toNumber())} AVAX</p>
+                {/* <p>Price: {ethers.utils.formatEther(data.toNumber())} AVAX</p> */}
+                <p>Price: 0.001 AVAX</p>
                 <MintNFTBtn/>
               </div>
 
