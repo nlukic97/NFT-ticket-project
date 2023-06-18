@@ -9,9 +9,15 @@ if(!contractAddress) throw new Error("Please set the .env variable REACT_APP_CON
 
 const MintNFTBtn = () => { 
     const {isConnected} = useAccount()
-    const { chain } = useNetwork()
-    console.log(chain);
-    const { chains, error, isLoading, pendingChainId, switchNetwork } = useSwitchNetwork()
+    const { chain } = useNetwork() // the current chain user is connected to
+    const { chains, error, isLoading, pendingChainId, switchNetwork } = useSwitchNetwork({
+      // If the user has clicked mint to switch to avalanche, this means we should call the mint function
+      onSuccess(data){
+        if(data.id === avalanche.id){
+          write?.()
+        }
+      }
+    })
     
     const { config } = usePrepareContractWrite({
         address: contractAddress,
@@ -44,7 +50,7 @@ const MintNFTBtn = () => {
             }
           }}
         >
-          {chain?.unsupported ? 'Switch Network' : 'Mint Now'}
+          Mint Now
         </button>
     )
 }
