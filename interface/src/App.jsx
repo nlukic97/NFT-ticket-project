@@ -1,9 +1,9 @@
 import { useState, useEffect} from 'react'
 
 import Nav from './components/Nav'
-import Banner from './components/Banner'
+import Banner from './components/blocks/Banner/Banner'
 import Logo from './components/Logo'
-import HeroSection from './components/HeroSection'
+import HeroSection from './components/sections/Hero/HeroSection'
 import MintSection from './components/MintSection'
 import ConnectWalletModal from './components/ConnectWalletModal'
 
